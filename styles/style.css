@@ -35,16 +35,29 @@ nav {
   object-fit: cover;
 }
 
-svg g:hover {
-  stroke-width: 2px;
-  stroke: black;
-  stroke-dasharray: 10, 5;
-}
+/*svg .pyramid:hover {
+}*/
 
-svg g polygon {
+svg .pyramid polygon {
   transition: fill 0.8s;
 }
 
-svg g:hover polygon {
+svg .pyramid:hover polygon {
   fill: white;
+  stroke-width: 4px;
+  stroke: black;
+  stroke-linejoin: round;
+}
+
+svg .pyramid .text-rect {
+  opacity: 0;
+  transform-origin: 0 0;
+  transition: transform 0.8s, opacity 0.8s, display 0.8s;
+  display: none;
+}
+
+svg .pyramid:hover .text-rect {
+  opacity: 1;
+  transform: scale(2);
+  display: block;
 }
