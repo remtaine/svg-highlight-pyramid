@@ -10,6 +10,9 @@
   --rehab-green: #00ff00;
   --rehab-yellow: #ffff00;
   --rehab-white: #ffffff;
+
+  --duration-anim: 0.4s;
+  --duration-anim2: 0.8s;
 }
 
 body {
@@ -39,7 +42,7 @@ nav {
 }*/
 
 svg .pyramid polygon {
-  transition: fill 0.8s;
+  transition: fill var(--duration-anim2);
 }
 
 svg .pyramid:hover polygon {
@@ -52,7 +55,8 @@ svg .pyramid:hover polygon {
 svg .pyramid .text-rect {
   opacity: 0;
   transform-origin: 0 0;
-  transition: transform 0.8s, opacity 0.8s, display 0.8s;
+  transition: transform var(--duration-anim), opacity var(--duration-anim),
+    display var(--duration-anim);
   display: none;
 }
 
