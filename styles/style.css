@@ -1,0 +1,50 @@
+:root {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --rehab-maroon: #880000;
+  --rehab-red: #ff0000;
+  --rehab-green: #00ff00;
+  --rehab-yellow: #ffff00;
+  --rehab-white: #ffffff;
+}
+
+body {
+  background-color: orange;
+}
+
+nav {
+  background-color: var(--rehab-green);
+  display: flex;
+  position: fixed;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+#front-image {
+  height: 100%;
+  display: block;
+  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+svg g:hover {
+  stroke-width: 2px;
+  stroke: black;
+  stroke-dasharray: 10, 5;
+}
+
+svg g polygon {
+  transition: fill 0.8s;
+}
+
+svg g:hover polygon {
+  fill: white;
+}
